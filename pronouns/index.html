@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pixi's pronouns</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+        <style>
+            ul.pronouns-list {
+                padding: 0;
+                list-style: none;
+            }
+            ul.pronouns-list li.yes {
+                color: light-dark(var(--light-accent), var(--dark-accent));
+                font-weight: bold;
+            }
+            ul.pronouns-list li.yes::before {
+                content: '\f004';
+                font-family: 'Font Awesome 7 Free';
+                margin-right: .5rem;
+            }
+            ul.pronouns-list li.okay::before {
+                content: '\f164';
+                font-family: 'Font Awesome 7 Free';
+                margin-right: .5rem;
+            }
+            ul.pronouns-list li.no {
+                color: tomato;
+                opacity: 60%;
+                font-size: .8em;
+            }
+            ul.pronouns-list li.no::before {
+                content: '\f057';
+                font-family: 'Font Awesome 7 Free';
+                margin-right: .5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/" id="logo"><img src="/assets/logo.png" alt="Pixi"></a>
+        <div class="card">
+            <h1 style="text-align: center;"><a href="/">back</a> • pronouns</h1>
+        </div>
+        <div class="row">
+            <div class="card">
+                <h1>pronouns</h1>
+                <ul class="pronouns-list">
+                    <li class="yes">she/her</li>
+                    <li class="okay">they/them</li>
+                    <li class="no">he/him</li>
+                    <li class="no">it/its</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h1>names</h1>
+                <ul class="pronouns-list">
+                    <li class="yes">pixi</li>
+                    <li class="yes">pxe</li>
+                    <li class="okay">pix</li>
+                    <li class="okay">blåhaj/haj</li>
+                    <li class="no">&lt;deadname&gt;</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h1>prefixes</h1>
+                <ul class="pronouns-list">
+                    <li class="yes">ms.</li>
+                    <li class="no">mr.</li>
+                    <li class="yes">ma'am</li>
+                    <li class="yes">madam</li>
+                    <li class="no">sir</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h1>descriptions</h1>
+                <ul class="pronouns-list">
+                    <li class="yes">girl</li>
+                    <li class="yes">lady</li>
+                    <li class="yes">woman</li>
+                    <li class="yes">person</li>
+                    <li class="no">man</li>
+                    <li class="no">boy</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

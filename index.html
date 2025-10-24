@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pixiboot</title>
+        <link rel="stylesheet" href="/style.css">
+        <style>
+            #welcome-mat {
+                padding: 5rem;
+            }
+
+            #welcome-mat #pretty-girl {
+                position: absolute;
+                height: 125%;
+                top: -12.5%;
+                left: -10em;
+                transition-duration: 250ms;
+                z-index: -1;
+                cursor: pointer;
+            }
+
+            @media screen and (width <= 600px) {
+                #welcome-mat {
+                    padding: inherit;
+                }
+                #welcome-mat #pretty-girl {
+                    display: none;
+                }
+            }
+        </style>
+        <script>
+            addEventListener("DOMContentLoaded", event => {
+                var girl = document.getElementById("pretty-girl")
+                girl.addEventListener("click", event => {
+                    let squeak = new Audio("/assets/squeak.ogg");
+                    squeak.preservesPitch = false
+                    squeak.playbackRate = Math.random()*0.2+0.9
+                    squeak.play();
+                    girl.animate(
+                        [
+                            {
+                                scale: "1 0.9"
+                            },
+                            {
+                                scale: "1 1"
+                            }
+                        ],
+                        {
+                            duration: 100,
+                            easing: "ease"
+                        }
+                    )
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <a href="/" id="logo"><img src="/assets/logo.png" alt="Pixi"></a>
+        <div class="card" id="welcome-mat">
+            <img src="/assets/pixi.png" alt="A drawing of Pixi" id="pretty-girl">
+            <h1>hai, i'm pixi! <span class="small">(<a href="/pronouns">she/her</a>)</span></h1>
+            <p>your local trans <a href="https://www.ikea.com/us/en/p/90373590/">blåhaj</a>-girl on the interwebs :3</p>
+            <p><a href="https://github.com/real-blahaj">github</a></p>
+            <p>contact me on discord @pixiboot</p>
+        </div>
+        <div class="card">
+            <h2>site navigation</h2>
+            <ul aria-label="nav" class="nav">
+                <li><a href="/about">about me</a></li>
+                <li><a href="/pronouns">pronouns</a></li>
+                <li><a href="/projects">projects</a></li>
+            </ul>
+        </div>
+        <p><i>hastily programmed in raw html</i></p>
+    </body>
+</html>
